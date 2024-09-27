@@ -5,7 +5,7 @@ public class MyArrays {
 System.out.println(arrayToString(test));
 
 System.out.println("Is returnCopy(test) different from test: " + (returnCopy(test) != test));
-System.out.println("Did concatArray(test,test2) combine both: " + (concatArray(test, test2)));
+System.out.println("Did concatArray(test,test2) combine both: " + (arrayToString(concatArray(test, test2)).equals(arrayToString(test).substring(0,test.length-2)+ ", " + arrayToString(test2).substring(1)) );
   }
 
   public static String arrayToString(int[] nums) {
