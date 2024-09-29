@@ -28,7 +28,7 @@ System.out.println("Did concatArray(test,test2) combine both: " + (arrayToString
   }
   
   public static int[] concatArray(int[]ary1,int[]ary2) {
-	  int result = new int[ary1.length + ary2.length];
+	  int[] result = new int[ary1.length + ary2.length];
 	  for (int i = 0; i < ary1.length; i++) {
 		  result[i] = ary1[i];
 	  }
