@@ -52,7 +52,7 @@ public class ArrayMethods{
   }
   public static void replaceNegative(int[][] vals) {
     for(int i = 0; i < vals.length; i++){
-      for(iht j = 0; j < vals[i].length; j++) {
+      for(int j = 0; j < vals[i].length; j++) {
         if (vals[i][j] < 0) {
           if (i == j) {
             vals[i][j] = 1;
