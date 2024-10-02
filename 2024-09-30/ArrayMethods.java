@@ -39,13 +39,17 @@ public class ArrayMethods{
 	replaceNegative(test7);
     System.out.println("Expected [[1], [], []] " + arrToString(test7));
 	
-	System.out.println("Are " + test1 + " and " + copy(test1) + " not the same: " + (test1 != copy(test1)));
-	System.out.println("Are " + test2 + " and " + copy(test2) + " not the same: " + (test2 != copy(test2)));
-	System.out.println("Are " + test3 + " and " + copy(test3) + " not the same: " + (test3 != copy(test3)));
-	System.out.println("Are " + test4 + " and " + copy(test4) + " not the same: " + (test4 != copy(test4)));
-	System.out.println("Are " + test5 + " and " + copy(test5) + " not the same: " + (test5 != copy(test5)));
-	System.out.println("Are " + test6 + " and " + copy(test6) + " not the same: " + (test6 != copy(test6)));
-	System.out.println("Are " + test7 + " and " + copy(test7) + " not the same: " + (test7 != copy(test7)));
+	System.out.println("Are " + arrToString(test1) + " and " + arrToString(copy(test1)) + " not the same: " + (test1 != copy(test1)));
+	System.out.println("Are " + arrToString(test2) + " and " + arrToString(copy(test2)) + " not the same: " + (test2 != copy(test2)));
+	System.out.println("Are " + arrToString(test3) + " and " + arrToString(copy(test3)) + " not the same: " + (test3 != copy(test3)));
+	System.out.println("Are " + arrToString(test4) + " and " + arrToString(copy(test4)) + " not the same: " + (test4 != copy(test4)));
+	System.out.println("Are " + arrToString(test5) + " and " + arrToString(copy(test5)) + " not the same: " + (test5 != copy(test5)));
+	System.out.println("Are " + arrToString(test6) + " and " + arrToString(copy(test6)) + " not the same: " + (test6 != copy(test6)));
+	System.out.println("Are " + arrToString(test7) + " and " + arrToString(copy(test7)) + " not the same: " + (test7 != copy(test7)));
+	int[][] test8 = {{-1,-1},{-2,-2},{-5,-5}};
+	System.out.println("Are " + arrToString(test8) + " and " + arrToString(copy(test8)) + " not the same: " + (test8 != copy(test8)));
+	int[][] test9 = {{},{},{}};
+	System.out.println("Are " + arrToString(test9) + " and " + arrToString(copy(test9)) + " not the same: " + (test9 != copy(test9)));
   }
   public static String arrayToString(int[] nums) {
     String result = "[";
@@ -92,10 +96,17 @@ public class ArrayMethods{
     }
   }
   public static int[] copy(int[] nums) {
-	  result = new int[nums.length];
+	  int[] result = new int[nums.length];
+	  for (int i = 0; i < nums.length; i++) {
+		  result[i] = nums[i];
+	  }
 	  return result;
   }
   public static int[][] copy(int[][] nums){
-	  
+	  int[][] result = new int[nums.length][];
+	  for (int i = 0; i < nums.length; i++) {
+		  result[i] = copy(nums[i]);
+	  }
+	  return result;
 	}
  }
