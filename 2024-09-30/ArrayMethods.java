@@ -38,6 +38,14 @@ public class ArrayMethods{
 	int[][] test7 = {{-4},{},{}};
 	replaceNegative(test7);
     System.out.println("Expected [[1], [], []] " + arrToString(test7));
+	
+	System.out.println("Are " + test1 + " and " + copy(test1) + " not the same: " + (test1 != copy(test1)));
+	System.out.println("Are " + test2 + " and " + copy(test2) + " not the same: " + (test2 != copy(test2)));
+	System.out.println("Are " + test3 + " and " + copy(test3) + " not the same: " + (test3 != copy(test3)));
+	System.out.println("Are " + test4 + " and " + copy(test4) + " not the same: " + (test4 != copy(test4)));
+	System.out.println("Are " + test5 + " and " + copy(test5) + " not the same: " + (test5 != copy(test5)));
+	System.out.println("Are " + test6 + " and " + copy(test6) + " not the same: " + (test6 != copy(test6)));
+	System.out.println("Are " + test7 + " and " + copy(test7) + " not the same: " + (test7 != copy(test7)));
   }
   public static String arrayToString(int[] nums) {
     String result = "[";
@@ -83,4 +91,11 @@ public class ArrayMethods{
       }
     }
   }
+  public static int[] copy(int[] nums) {
+	  result = new int[nums.length];
+	  return result;
+  }
+  public static int[][] copy(int[][] nums){
+	  
+	}
  }
