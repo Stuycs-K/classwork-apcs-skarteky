@@ -16,7 +16,7 @@ public class ArrayMethods{
 	System.out.println("Expected 40 " + arr2DSum(new int[][]{{40,0},{}}));
 	System.out.println("Expected 40 " + arr2DSum(new int[][]{{10,15},{20,-5}}));
 	System.out.println("Expected 40 " + arr2DSum(new int[][]{{15},{5},{20}}));
-	   
+
 	int[][] test1 = {{-2,-2,10}, {-3,-3,11}, {-4,12,-4}};
 	replaceNegative(test1);
     System.out.println("Expected [[1,0,10], [0, 1, 11], [0, 12, 1]] " + arrToString(test1));
@@ -38,7 +38,7 @@ public class ArrayMethods{
 	int[][] test7 = {{-4},{},{}};
 	replaceNegative(test7);
     System.out.println("Expected [[1], [], []] " + arrToString(test7));
-	
+
 	System.out.println("Are " + arrToString(test1) + " and " + arrToString(copy(test1)) + " not the same: " + (test1 != copy(test1)));
 	System.out.println("Are " + arrToString(test2) + " and " + arrToString(copy(test2)) + " not the same: " + (test2 != copy(test2)));
 	System.out.println("Are " + arrToString(test3) + " and " + arrToString(copy(test3)) + " not the same: " + (test3 != copy(test3)));
@@ -51,7 +51,7 @@ public class ArrayMethods{
 	int[][] test9 = {{},{},{}};
 	System.out.println("Are " + arrToString(test9) + " and " + arrToString(copy(test9)) + " not the same: " + (test9 != copy(test9)));
   }
-  public static String arrayToString(int[] nums) {
+  public static String arrToString(int[] nums) {
     String result = "[";
     for(int i = 0; i < nums.length; i++) {
       result = result + nums[i];
