@@ -1,7 +1,16 @@
 import java.util.Arrays;
 public class ArrayDemo {
     public static void main(String args[]) {
-
+      new int[] test1 = {};
+      System.out.println("are Arrays.toString(test1) and arrToString(test1) the same: " + Arrays.toString(test1).equals(arrToString(test1)));
+      new int[] test2 = {1,2,3};
+      System.out.println("are Arrays.toString(test2) and arrToString(test2) the same: " + Arrays.toString(test2).equals(arrToString(test2)));
+      new int[] test3 = {-4,-5,-6};
+      System.out.println("are Arrays.toString(test3) and arrToString(test3) the same: " + Arrays.toString(test3).equals(arrToString(test3)));
+      new int[] test4 = {-7,8,9,-10};
+      System.out.println("are Arrays.toString(test4) and arrToString(test4) the same: " + Arrays.toString(test4).equals(arrToString(test4)));
+      new int[][] test1 = {};
+      System.out.println("are Arrays.deepToString(test) and arrToString(test) the same: " + Arrays.deepToString(test).equals(arrToString(test)));
     }
     public static String arrToString(int[] nums) {
       String result = "[";
