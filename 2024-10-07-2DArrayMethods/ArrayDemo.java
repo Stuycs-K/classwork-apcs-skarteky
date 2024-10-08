@@ -18,6 +18,16 @@ public class ArrayDemo {
 	  int[][] test8 = {{},{-1},{3,4}};
       System.out.println("are Arrays.deepToString(test8) and arrToString(test8) the same: " + Arrays.deepToString(test8).equals(arrToString(test8)));
 	
+	  int[][[] test = {};
+	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
+	   int[][[] test = {};
+	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
+	   int[][[] test = {};
+	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
+	   int[][[] test = {};
+	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
+	   int[][[] test = {};
+	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
 	}
     public static String arrToString(int[] nums) {
       String result = "[";
@@ -30,7 +40,6 @@ public class ArrayDemo {
       return result + "]";
     }
     public static String arrToString(int[][]ary){
-    //this should use arrToString(int[])
   	String result = "[";
   	for (int i = 0; i < ary.length;i++) {
   		result += arrToString(ary[i]);
@@ -40,6 +49,18 @@ public class ArrayDemo {
   	}
   	return result + "]";
     }
+	public static int countZeros2D(int[][] nums){
+	int result = 0;
+	for (int i = 0; i < nums.length; i++) {
+		for (int j = 0; j < nums[].length; j++) {
+			if (nums[i][j] == 0) {
+				result++;
+			}
+		}
+	}
+    return result;
+	}
+
     public static int arr2DSum(int[][]nums){
     int sum = 0;
     for (int i = 0; i < nums.length; i++) {
@@ -76,4 +97,10 @@ public class ArrayDemo {
       }
       return result;
     }
+	public static int[][] swapRC(int[][]nums){
+    return new int[1][1];
+	}
+	 public static String htmlTable(int[][]nums){
+    return "";
+	}
 }
