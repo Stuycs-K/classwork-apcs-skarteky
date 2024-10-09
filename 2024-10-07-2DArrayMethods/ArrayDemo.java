@@ -18,16 +18,16 @@ public class ArrayDemo {
 	  int[][] test8 = {{},{-1},{3,4}};
       System.out.println("are Arrays.deepToString(test8) and arrToString(test8) the same: " + Arrays.deepToString(test8).equals(arrToString(test8)));
 	
-	  int[][[] test = {};
-	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
-	   int[][[] test = {};
-	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
-	   int[][[] test = {};
-	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
-	   int[][[] test = {};
-	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
-	   int[][[] test = {};
-	  System.out.println(Arrays.deep.ToString(test) + " expected 0 got:" + countZeros2D(test));
+	  int[][[] test9 = {};
+	  System.out.println(Arrays.deep.ToString(test9) + " expected 0 got: " + countZeros2D(test9));
+	   int[][[] test10 = {{1,2,0},{3,4,0},{5,6,0}};
+	  System.out.println(Arrays.deep.ToString(test10) + " expected 3 got: " + countZeros2D(test10));
+	   int[][[] test11 = {{0,0,1},{0,0,2}};
+	  System.out.println(Arrays.deep.ToString(test11) + " expected 4 got: " + countZeros2D(test11));
+	   int[][[] test12 = {{1,1,2},{4,0},{0}};
+	  System.out.println(Arrays.deep.ToString(test12) + " expected 2 got: " + countZeros2D(test12));
+	   int[][[] test13 = {{},{0},{1,0},{2,1,0}};
+	  System.out.println(Arrays.deep.ToString(test13) + " expected 3 got: " + countZeros2D(test13));
 	}
     public static String arrToString(int[] nums) {
       String result = "[";
