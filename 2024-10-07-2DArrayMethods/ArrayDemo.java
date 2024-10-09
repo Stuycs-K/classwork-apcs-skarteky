@@ -35,8 +35,15 @@ public class ArrayDemo {
 	  System.out.println("Original: " + Arrays.deepToString(test11) + " result: " + Arrays.deepToString(swapRC(test11)));
 	  int[][] test14 = {{-1,-2,3},{-4,-4,-4},{-4,-5,-6}};
 	  System.out.println("Original: " + Arrays.deepToString(test14) + " result: " + Arrays.deepToString(swapRC(test14)));
-	 
-	 
+	  
+	  System.out.println(htmlTable(test6));
+	  System.out.println(htmlTable(test7));
+	  System.out.println(htmlTable(test8));
+	  System.out.println(htmlTable(test10));
+	  System.out.println(htmlTable(test11));
+	  System.out.println(htmlTable(test12));
+	  System.out.println(htmlTable(test13));
+	  System.out.println(htmlTable(test14));
 	
 	}
     public static String arrToString(int[] nums) {
@@ -116,7 +123,21 @@ public class ArrayDemo {
 		}
     return result;
 	}
+	
+	 public static String htmlHelper(int[] nums) {
+		 String result = "";
+		 for (int i = 0; i < nums.length; i++) {
+			 result = result + "<td>" + nums[i] + "</td>";
+		 }
+		 return result;
+	 }
+	
 	 public static String htmlTable(int[][]nums){
-    return "";
+		String result = "<table>";
+		for (int i = 0; i < nums.length; i++) {
+			 result = result + "<tr>" + htmlHelper(nums[i]) + "</tr>";
+		}
+		return result + "</table>";
 	}
+	
 }
