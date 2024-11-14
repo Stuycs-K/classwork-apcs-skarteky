@@ -29,4 +29,13 @@ public class ArrayListPractice{
     }
     return result;
   }
+
+  public static ArrayList<String> mixLists(ArrayList<String> a, ArrayList<String> b){
+    ArrayList<String> result = new ArrayList<String>(a.size() + b.size());
+    int aSize = a.size();
+    int bSize= b.size();
+    while(aSize > 0 && bSize > 0){
+      result.add()
+    }
+  }
 }
