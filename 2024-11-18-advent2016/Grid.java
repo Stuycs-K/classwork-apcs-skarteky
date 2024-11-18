@@ -18,11 +18,12 @@ public class Grid{
     try{
       File file = new File(filename);
       Scanner input = new Scanner(file);
-      int xCoord;
-      int yCoord;
+      int xCoord = 0;
+      int yCoord = 0;
       int direction = 1;
       while(input.hasNext()){
-        direction = move(input.next(), direction);
+        String movement = input.next();
+        direction = move(movement, direction);
         if(Math.abs(direction) % 4 == 0){
           xCoord = xCoord - Integer.parseInt(movement.substring(1, movement.length()-1));
         }
@@ -42,6 +43,6 @@ public class Grid{
     }
   }
   public static void main(String[] args){
-    System.println(distance("input.txt"));
+    System.out.println(distance("input.txt"));
   }
 }
