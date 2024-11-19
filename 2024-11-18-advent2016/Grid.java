@@ -23,17 +23,18 @@ public class Grid{
       int direction = 1;
       while(input.hasNext()){
         String movement = input.next();
+        int dist = Integer.parseInt(movement.substring(1, movement.length() - 1));
         direction = move(movement, direction);
         if(Math.abs(direction) % 4 == 0){
-          xCoord = xCoord - Integer.parseInt(movement.substring(1, movement.length()-1));
+          xCoord = xCoord - dist;
         }
         if(Math.abs(direction) % 2 == 0){
-          xCoord = xCoord + Integer.parseInt(movement.substring(1, movement.length()-1));
+          xCoord = xCoord + dist;
         }
         if(Math.abs(direction) %  4 == 3){
-          yCoord = yCoord - Integer.parseInt(movement.substring(1, movement.length()-1));
+          yCoord = yCoord - dist;
         }else{
-          yCoord = yCoord + Integer.parseInt(movement.substring(1, movement.length()-1));
+          yCoord = yCoord + dist;
         }
       }
       return Math.abs(xCoord) + Math.abs(yCoord);
