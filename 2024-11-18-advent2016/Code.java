@@ -9,21 +9,22 @@ public class Code{
     int positionX = 1;
     int positionY = 1;
     int[][] keypad = {{1,2,3}, {4,5,6}, {7,8,9}};
-    Scanner direct = new Scanner(input);
-    while(direct.hasNextChar()){
-      char nextMove = direct.nextChar();
+    int i = 0;
+    while(i < input.length()){
+      char nextMove = input.charAt(i);
       if(nextMove == 'L'){
-        positionX--;
+        if(positionX != 0) positionX--;
       }
       if(nextMove == 'R'){
-        positionX++;
+        if(positionX != 2)positionX++;
       }
       if(nextMove == 'D'){
-        positionY--;
+        if(positionY != 0)positionY--;
       }
       if(nextMove == 'U'){
-        positionY++;
+        if(positionY != 2)positionY++;
       }
+      i++;
     }
     return keypad[positionY][positionX];
   }
@@ -36,7 +37,7 @@ public class Code{
       code+=getNum(in);
     }
     return code;
-    }catch(Exception e){
+    }catch(FileNotFoundException e){
       return null;
     }
   }
