@@ -35,17 +35,17 @@ public class Grid{
         String movement = input.next();
         direction = move(movement, direction);
         int dist = Integer.parseInt(getDist(movement));
-        
-        if(Math.abs(direction) % 4 == 0){
+        if(direction % 4 == 0){
           xCoord = xCoord - dist;
-        }else{ if(Math.abs(direction) % 2 == 0){
+        }else{ if(direction % 2 == 0){
           xCoord = xCoord + dist;
         	}
         }
-        if(Math.abs(direction) %  4 == 3){
+        if(direction %  4 == 3 || direction % 4 == -1){
           yCoord = yCoord - dist;
-        }else{
-          yCoord = yCoord + dist;
+        }else{if(direction %  4 == 1 || direction % 4 == -3) {
+        	yCoord = yCoord + dist;
+        	} 
         }
       }
       return Math.abs(xCoord) + Math.abs(yCoord);
