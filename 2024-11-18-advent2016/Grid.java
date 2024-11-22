@@ -13,6 +13,16 @@ public class Grid{
     }
     return direction;
   }
+  
+  public static String getDist(String m) {
+	  String result = "";
+	  for(int i = 0; i < m.length();i++) {
+		  if(m.charAt(i) > 47 && m.charAt(i)< 58) {
+			  result+= m.charAt(i);
+		  }
+	  }
+	  return result;
+  }
 
   public static int distance(String filename){
     try{
@@ -23,13 +33,14 @@ public class Grid{
       int direction = 1;
       while(input.hasNext()){
         String movement = input.next();
-        int dist = Integer.parseInt(movement.substring(1, movement.length() - 1));
         direction = move(movement, direction);
+        int dist = Integer.parseInt(getDist(movement));
+        
         if(Math.abs(direction) % 4 == 0){
           xCoord = xCoord - dist;
-        }
-        if(Math.abs(direction) % 2 == 0){
+        }else{ if(Math.abs(direction) % 2 == 0){
           xCoord = xCoord + dist;
+        	}
         }
         if(Math.abs(direction) %  4 == 3){
           yCoord = yCoord - dist;
