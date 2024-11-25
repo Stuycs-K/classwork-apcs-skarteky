@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class Day6{
 	public static int[] alphabetStats(String s) {
 		int[] result = new int[26];
@@ -94,5 +99,46 @@ public class Day6{
 			}
 		}
 		return index;
+	}
+	
+	public static int minGet(int[] stats) {
+		int min = 100000;
+		int index = 0;
+		for(int i = 0; i < stats.length; i++) {
+			if (stats[i] < min) {
+				min = stats[i];
+				index = i;
+			}
+		}
+		return index;
+	}
+	
+	public static String message(String filename) {
+	try{
+		ArrayList<String> inputs = new ArrayList<String>(); 
+		String temp = "";
+		String result = "";
+		File file = new File(filename);
+		Scanner input = new Scanner(file);
+		while(input.hasNextLine()) {
+			inputs.add(input.nextLine());
+			}
+		for(int i = 0; i < 8; i++) {
+			int j = 0;
+			while(j < inputs.size()) {
+				temp+=inputs.get(j).charAt(i);
+				j++;
+			}
+			result+=maxGet(alphabetStats(temp)) + "-";
+			temp = "";
+		}
+		return result;
+		}catch (FileNotFoundException e){
+			return null;
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(message("input3.txt"));
 	}
 }
