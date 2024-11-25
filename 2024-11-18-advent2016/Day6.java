@@ -129,7 +129,7 @@ public class Day6{
 				temp+=inputs.get(j).charAt(i);
 				j++;
 			}
-			result+=maxGet(alphabetStats(temp)) + "-";
+			result+=minGet(alphabetStats(temp)) + "-";
 			temp = "";
 		}
 		return result;
