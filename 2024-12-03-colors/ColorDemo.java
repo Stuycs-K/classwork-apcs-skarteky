@@ -21,7 +21,6 @@ public class ColorDemo{
     System.out.println("meow");
     color(34,35,4);
     System.out.println("meow");
-    go(1, 1);
     System.out.println("meow");
 
 
