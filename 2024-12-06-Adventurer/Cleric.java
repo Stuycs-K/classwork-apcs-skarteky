@@ -53,7 +53,7 @@ public class Cleric extends Adventurer{
   // increase own maxHP
   public abstract String support(){
     this.setMaxHP((int)(this.getMaxHP() * 1.25));
-    this.setHP((int)(this.getHP) * 1.25));
+    this.setHP((int)(this.getHP() * 1.25));
     return "Increased Max HP to " + this.getMaxHP() + " HP!";
   }
 
@@ -66,13 +66,13 @@ public class Cleric extends Adventurer{
         int temp = other.getSpecial();
         other.restoreSpecial(other.getSpecialMax()/4);
         this.mana -= 4;
-        return other.toString() + " healed for " + other.getMaxHP() - temp + " HP, " + other.getSpecialName() + " restored by " + other.getSpecial() - temp + "!");
+        return other.toString() + " healed for " + other.getMaxHP() - temp + " HP, " + other.getSpecialName() + " restored by " + other.getSpecial() - temp + "!";
       }else {
         other.setHP(this.getMaxHP()/2 + other.getHP());
         int temp = other.getSpecial();
         other.restoreSpecial(other.getSpecialMax()/4);
         this.mana -= 4;
-        return other.toString() + " healed for " + this.getMaxHP()/2 + " HP, " + other.getSpecialName() + " restored by " + other.getSpecial() - temp + "!");
+        return other.toString() + " healed for " + this.getMaxHP()/2 + " HP, " + other.getSpecialName() + " restored by " + other.getSpecial() - temp + "!";
       }
 
   }
