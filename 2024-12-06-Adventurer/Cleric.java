@@ -13,17 +13,17 @@ public class Cleric extends Adventurer{
     this.maxMana = mana;
   }
 
-  public abstract String getSpecialName(){
+  public String getSpecialName(){
     return "Mana";
   }
   //accessor methods
-  public abstract int getSpecial(){
+  public int getSpecial(){
     return this.mana;
   }
-  public abstract void setSpecial(int n){
+  public void setSpecial(int n){
     mana = n;
   }
-  public abstract int getSpecialMax(){
+  public int getSpecialMax(){
     return this.maxMana;
   }
 
@@ -32,13 +32,13 @@ public class Cleric extends Adventurer{
     support their allys
   */
   //hurt or hinder the target adventurer
-  public abstract String attack(Adventurer other){
+  public String attack(Adventurer other){
     other.applyDamage(1);
   }
 
   //heall or buff the target adventurer
   // heals based on maxHp
-  public abstract String support(Adventurer other){
+  public String support(Adventurer other){
     if(this.getMaxHP()/4 + other.getHP() > other.getMaxHP()){
         int temp = other.getHP();
         other.setHP(other.getMaxHP());
@@ -51,7 +51,7 @@ public class Cleric extends Adventurer{
 
   //heall or buff self
   // increase own maxHP
-  public abstract String support(){
+  public String support(){
     this.setMaxHP((int)(this.getMaxHP() * 1.25));
     this.setHP((int)(this.getHP() * 1.25));
     return "Increased Max HP to " + this.getMaxHP() + " HP!";
@@ -59,7 +59,7 @@ public class Cleric extends Adventurer{
 
   //hurt or hinder the target adventurer, consume some special resource
   // restore hp, restore special
-  public abstract String specialAttack(Adventurer other){
+  public String specialAttack(Adventurer other){
     if(this.getMaxHP()/2 + other.getHP() > other.getMaxHP()){
         int temp = other.getHP();
         other.setHP(other.getMaxHP());
