@@ -26,7 +26,10 @@ public class Game{
       System.out.println(opp.toString() + " - " + opp.getHP() + "/" + opp.getmaxHP() + "HP - " + opp.getSpecial() + "/" + opp.getSpecialMax() + " " + opp.getSpecialName());
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       String move = userInput.nextLine();
-     
+     while( !move.equals("a") && !move.equals("attack") && !move.equals("su") && !move.equals("support") && !move.equals("sp") && !move.equals("special") && !move.equals("q") && !move.equals("quit") ) {
+         System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
+         move = userInput.nextLine();
+     }
       if(move.equals("a") || move.equals("attack")){
         System.out.println(user.attack(opp));
       }
