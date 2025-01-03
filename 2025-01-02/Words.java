@@ -50,6 +50,15 @@ public class Words{
       if(n==0){
         return "zero";
       }
+    }else {
+      if(n < 20){
+        if(n<15 || n == 14){
+          return toWords(n/10) + "teen";
+        }
+        if(n==13){
+          return "thirteen";
+        }
+      }
     }
   }
 
