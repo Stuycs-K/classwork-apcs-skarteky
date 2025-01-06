@@ -10,6 +10,9 @@ public class Words{
   }
 
   public static String toWords(int n){
+    if
+  }
+  public static String toWords(int n, String s){
     if(n < 14){
     	if(n==13){
             return "thirteen";
@@ -50,15 +53,12 @@ public class Words{
       if(n==1){
         return "one";
       }
-      if(n==0){
-        return "zero";
-      }
     }else {
       if(n < 20){
         if(n>15 || n == 14){
           return toWords(n/10) + "teen";
         }
-        
+
         if(n==15){
             return "fifteen";
           }
