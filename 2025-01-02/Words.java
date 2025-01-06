@@ -10,7 +10,10 @@ public class Words{
   }
 
   public static String toWords(int n){
-    if(n < 12){
+    if(n < 14){
+    	if(n==13){
+            return "thirteen";
+          }
       if(n== 12){
         return "twelve";
       }
@@ -52,17 +55,26 @@ public class Words{
       }
     }else {
       if(n < 20){
-        if(n<15 || n == 14){
+        if(n>15 || n == 14){
           return toWords(n/10) + "teen";
         }
-        if(n==13){
-          return "thirteen";
-        }
+        
+        if(n==15){
+            return "fifteen";
+          }
       }
     }
+    return "number";
   }
 
   public static void main(String args[]){
     makeWords(3, "", "xy");
+    System.out.println(toWords(1));
+    System.out.println(toWords(11));
+    System.out.println(toWords(12));
+    System.out.println(toWords(13));
+    System.out.println(toWords(15));
+    System.out.println(toWords(5));
+    System.out.println(toWords(9));
   }
 }
